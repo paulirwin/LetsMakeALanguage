@@ -1,0 +1,12 @@
+i := 0
+f := ""
+b := ""
+fb := ""
+
+while (i = i + 1) <= 100 do
+begin
+    f = "fizz" if i % 3 == 0 else ""
+    b = "buzz" if i % 5 == 0 else ""
+    fb = f + b
+    print_line(i if fb == "" else fb)
+end

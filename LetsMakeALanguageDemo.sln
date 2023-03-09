@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsMakeALanguageDemo", "LetsMakeALanguageDemo\LetsMakeALanguageDemo.csproj", "{BF8C6519-B0D2-4FC5-A27F-7B5252B30447}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsMakeALanguageDemo.Tests", "LetsMakeALanguageDemo.Tests\LetsMakeALanguageDemo.Tests.csproj", "{FFA47301-4F2A-4BBA-B8CE-8BE07025C5DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF8C6519-B0D2-4FC5-A27F-7B5252B30447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF8C6519-B0D2-4FC5-A27F-7B5252B30447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF8C6519-B0D2-4FC5-A27F-7B5252B30447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF8C6519-B0D2-4FC5-A27F-7B5252B30447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA47301-4F2A-4BBA-B8CE-8BE07025C5DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA47301-4F2A-4BBA-B8CE-8BE07025C5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA47301-4F2A-4BBA-B8CE-8BE07025C5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA47301-4F2A-4BBA-B8CE-8BE07025C5DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

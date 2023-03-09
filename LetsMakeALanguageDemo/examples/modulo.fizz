@@ -1,0 +1,12 @@
+// declare and assign variable
+x := 5
+
+// some examples of printing
+print("x is ")
+print_line(x)
+
+print("x should fizz: ")
+print_line(x % 3 == 0)
+
+print("x should buzz: ")
+print_line(x % 5 == 0)
