@@ -33,8 +33,8 @@ expression:
     | expression LT expression
     | expression LTE expression
     | expression GT expression
-    | expression GTE expression;
-    //| expression IF condition ELSE expression;
+    | expression GTE expression
+    | expression IF condition ELSE expression;
     
 simpleExpression:
     literalExpression

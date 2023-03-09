@@ -90,24 +90,24 @@ public class Interpreter
             AssignmentExpression a => InterpretAssignmentExpression(a),
             ParenthesizedExpression p => InterpretExpression(p.Expression),
             CallExpression c => InterpretCallExpression(c),
-            //TernaryExpression t => InterpretTernaryExpression(t),
+            TernaryExpression t => InterpretTernaryExpression(t),
             _ => throw new NotImplementedException($"Expression type {expression.GetType().Name} not yet implemented in interpreter")
         };
     }
 
-    // private static object InterpretTernaryExpression(TernaryExpression ternaryExpression)
-    // {
-    //     var conditionResult = InterpretExpression(ternaryExpression.Condition);
-    //
-    //     if (conditionResult is not bool conditionValue)
-    //     {
-    //         throw new InvalidOperationException("Ternary operator (if/else) condition must result in a boolean value");
-    //     }
-    //
-    //     return conditionValue
-    //         ? InterpretExpression(ternaryExpression.ThenExpression)
-    //         : InterpretExpression(ternaryExpression.ElseExpression);
-    // }
+    private static object InterpretTernaryExpression(TernaryExpression ternaryExpression)
+    {
+        var conditionResult = InterpretExpression(ternaryExpression.Condition);
+    
+        if (conditionResult is not bool conditionValue)
+        {
+            throw new InvalidOperationException("Ternary operator (if/else) condition must result in a boolean value");
+        }
+    
+        return conditionValue
+            ? InterpretExpression(ternaryExpression.ThenExpression)
+            : InterpretExpression(ternaryExpression.ElseExpression);
+    }
 
     private static object InterpretCallExpression(CallExpression callExpression)
     {

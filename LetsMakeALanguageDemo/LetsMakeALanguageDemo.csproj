@@ -20,8 +20,4 @@
     <Content Include="Grammar\Fizzy.g4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="Syntax\TernaryExpression.cs" />
-  </ItemGroup>
-
 </Project>

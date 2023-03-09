@@ -9,8 +9,8 @@ public class FizzBuzzTest
         Interpreter.ResetGlobalState();
     }
     
-    [Fact(Skip = "Not yet implemented")]
-    //[Fact]
+    //[Fact(Skip = "Not yet implemented")]
+    [Fact]
     public void FizzBuzz()
     {
         var sb = new StringBuilder();

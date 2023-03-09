@@ -63,8 +63,8 @@ x
         Assert.Equal(10, result);
     }
     
-    [Fact(Skip = "Not yet implemented")]
-    //[Fact]
+    //[Fact(Skip = "Not yet implemented")]
+    [Fact]
     public void SimpleTernaryTest()
     {
         const string input = """

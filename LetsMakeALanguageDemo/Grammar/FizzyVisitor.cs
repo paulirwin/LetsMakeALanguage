@@ -58,10 +58,10 @@ public class FizzyVisitor : FizzyBaseVisitor<SyntaxNode>
             return VisitSimpleExpression(simpleExpression);
         }
 
-        // if (context.ELSE() is not null)
-        // {
-        //     return VisitTernaryExpression(context);
-        // }
+        if (context.ELSE() is not null)
+        {
+            return VisitTernaryExpression(context);
+        }
 
         var exprs = context.expression();
         BinaryOperator op;
@@ -117,30 +117,30 @@ public class FizzyVisitor : FizzyBaseVisitor<SyntaxNode>
         return new BinaryExpression(left, op, right);
     }
 
-    // private SyntaxNode VisitTernaryExpression(FizzyParser.ExpressionContext context)
-    // {
-    //     if (context.expression().Length != 2)
-    //     {
-    //         throw new ParserException("Unable to parse ternary expression", context.start);
-    //     }
-    //
-    //     if (VisitCondition(context.condition()) is not Expression condition)
-    //     {
-    //         throw new ParserException("Unable to parse ternary expression", context.condition().start);
-    //     }
-    //
-    //     if (VisitExpression(context.expression()[0]) is not Expression thenExpression)
-    //     {
-    //         throw new ParserException("Unable to parse ternary expression", context.expression()[0].start);
-    //     } 
-    //     
-    //     if (VisitExpression(context.expression()[1]) is not Expression elseExpression)
-    //     {
-    //         throw new ParserException("Unable to parse ternary expression", context.expression()[1].start);
-    //     }
-    //
-    //     return new TernaryExpression(thenExpression, condition, elseExpression);
-    // }
+    private SyntaxNode VisitTernaryExpression(FizzyParser.ExpressionContext context)
+    {
+        if (context.expression().Length != 2)
+        {
+            throw new ParserException("Unable to parse ternary expression", context.start);
+        }
+    
+        if (VisitCondition(context.condition()) is not Expression condition)
+        {
+            throw new ParserException("Unable to parse ternary expression", context.condition().start);
+        }
+    
+        if (VisitExpression(context.expression()[0]) is not Expression thenExpression)
+        {
+            throw new ParserException("Unable to parse ternary expression", context.expression()[0].start);
+        } 
+        
+        if (VisitExpression(context.expression()[1]) is not Expression elseExpression)
+        {
+            throw new ParserException("Unable to parse ternary expression", context.expression()[1].start);
+        }
+    
+        return new TernaryExpression(thenExpression, condition, elseExpression);
+    }
 
     public override SyntaxNode VisitIdentifierExpression(FizzyParser.IdentifierExpressionContext context)
     {
