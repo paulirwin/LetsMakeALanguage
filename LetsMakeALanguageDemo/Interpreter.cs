@@ -169,6 +169,9 @@ public class Interpreter
         {
             BinaryOperator.Modulo => leftInt % rightInt,
             BinaryOperator.Addition => leftInt + rightInt,
+            BinaryOperator.Subtraction => leftInt - rightInt,
+            BinaryOperator.Multiplication => leftInt * rightInt,
+            BinaryOperator.Division => leftInt / rightInt,
             BinaryOperator.LessThan => leftInt < rightInt,
             BinaryOperator.LessThanEqual => leftInt <= rightInt,
             BinaryOperator.GreaterThan => leftInt > rightInt,

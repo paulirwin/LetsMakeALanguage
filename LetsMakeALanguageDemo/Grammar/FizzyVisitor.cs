@@ -74,6 +74,18 @@ public class FizzyVisitor : FizzyBaseVisitor<SyntaxNode>
         {
             op = BinaryOperator.Addition;
         }
+        else if (context.SUBTRACTION() is not null)
+        {
+            op = BinaryOperator.Subtraction;
+        }
+        else if (context.MULTIPLICATION() is not null)
+        {
+            op = BinaryOperator.Multiplication;
+        }
+        else if (context.DIVISION() is not null)
+        {
+            op = BinaryOperator.Division;
+        }
         else if (context.EQUALS() is not null)
         {
             op = BinaryOperator.Equal;
