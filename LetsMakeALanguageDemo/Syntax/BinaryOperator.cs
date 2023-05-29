@@ -4,6 +4,9 @@ public enum BinaryOperator
 {
     Modulo,
     Addition,
+    Subtraction,
+    Multiplication,
+    Division,
     Equal,
     LessThan,
     GreaterThan,
